@@ -12,14 +12,15 @@ id_rsa:     private key, insecure_private_key ; Host server A ; chmod 600 id_rsa
 ./ssh
 
 
-- cmd
+- cmd 
+/* Gemerator
 ssh-keygen -t rsa
-ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > public_key
-ssh-keygen -yf /c/users/tky/.vagrant.d/insecure_private_key > ~/.ssh/authorized_keys/public_key
-
-/*
  config.ssh.private_key_path = "C:\\Users\\tky\\.ssh\\id_rsa"
  config.ssh.forward_agent = true 
+*/
+/* cp (default) > ~/.ssh/publickey
+ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > public_key
+ssh-keygen -yf /c/users/tky/.vagrant.d/insecure_private_key > ~/.ssh/public_key (authorized_keys/public_key)
 */
 
 /**
@@ -29,7 +30,7 @@ cd vm
 ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > ./.ssh/public_key (strage ~/.ssh/github_strage/public_key)
 **/
 
-/**
+/** config file
 ~/.ssh/config
 
 vagrant ssh-config --host hostname >> ~/.ssh/config
@@ -37,11 +38,16 @@ vagrant ssh-config --host hostname >> ~/.ssh/config
 vagrant ssh-config --host name
 vagrant ssh-config --host name >> ~/.ssh/config #~/.ssh/config
 
-# ~/.ssh/config
-Host 192.168.50.*
+# ~/.ssh/config AFTER
+Host 192.168.33.10
   IdentityFile ~/.vagrant.d/insecure_private_key
   User vagrant
     
+# ~/.ssh/config BEFORE
+Host default
+  IdentityFile ~/.vagrant.d/insecure_private_key
+  User vagrant
+   
 $ssh name
 
 **/
