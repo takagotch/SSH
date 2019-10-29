@@ -16,7 +16,7 @@ ssh-keygen -t rsa
 tky ~
 cd ../../..
 
-GLOBAL
+root GLOBAL
 /etc/ssh/
 ssh_config
 sshd_config
