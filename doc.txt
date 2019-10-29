@@ -84,6 +84,17 @@ moduli
 #   RekeyLimit 1G 1h
 
 ---
+ssh  : TO the other server(folder vagrant) 
+sshd : FROM the other server(folder vagrant) ; deamon
+//**
+ssh
+ssh (SSH client) is a program for logging into a remote machine and
+for executing commands on a remote machine.
+
+sshd
+sshd (OpenSSH Daemon) is the daemon program for ssh(1). Together
+sshd listens for connections from clients. 
+**//
 
 /etc/ssh/sshd_config
 #	$OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
