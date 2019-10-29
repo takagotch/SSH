@@ -1,5 +1,8 @@
 - PC name
 Host server A -> client server B
+/** vagrant
+/c/Users/tky/.vagrant.d/insecure_private_key -> ~/.ssh | ~/.ssh/vagrant/public_key
+**/
 
 - key name
 id_rsa.pub: public key, authorized_keys ; client server B ; chmod 600 id_rsa.pub
