@@ -21,9 +21,21 @@ cd vm
 ~/vm
 ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > ./.ssh/public_key (strage ~/.ssh/github_strage/public_key)
 **/
+
+/**
 vagrant ssh-config --host hostname >> ~/.ssh/config
 
+vagrant ssh-config --host name
+vagrant ssh-config --host name >> ~/.ssh/config #~/.ssh/config
 
+# ~/.ssh/config
+Host 192.168.50.*
+  IdentityFile ~/.vagrant.d/insecure_private_key
+  User vagrant
+    
+$ssh name
+
+**/
 
 
 
