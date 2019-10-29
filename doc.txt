@@ -13,6 +13,7 @@ cmd
 ssh-keygen -t rsa
 
 ---
+windows
 tky ~
 cd ../../..
 
