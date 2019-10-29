@@ -20,7 +20,7 @@ ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > ./.ssh/vagrant/pub
 **/
 vagrant ssh-config --host hostname >> ~/.ssh/config
 
----
+--------------------------------------------------------------------------------
 windows
 tky ~
 cd ../../..
@@ -30,6 +30,19 @@ cd ../../..
 ssh_config
 sshd_config
 moduli
+
+ssh  : TO the other server(folder vagrant) 
+sshd : FROM the other server(folder vagrant) ; deamon
+//**
+ssh
+ssh (SSH client) is a program for logging into a remote machine and
+for executing commands on a remote machine.
+
+sshd
+sshd (OpenSSH Daemon) is the daemon program for ssh(1). Together
+sshd listens for connections from clients. 
+**//
+
 
 /etc/ssh/ssh_config
 #	$OpenBSD: ssh_config,v 1.30 2016/02/20 23:06:23 sobrado Exp $
@@ -83,18 +96,7 @@ moduli
 #   ProxyCommand ssh -q -W %h:%p gateway.example.com
 #   RekeyLimit 1G 1h
 
----
-ssh  : TO the other server(folder vagrant) 
-sshd : FROM the other server(folder vagrant) ; deamon
-//**
-ssh
-ssh (SSH client) is a program for logging into a remote machine and
-for executing commands on a remote machine.
-
-sshd
-sshd (OpenSSH Daemon) is the daemon program for ssh(1). Together
-sshd listens for connections from clients. 
-**//
+------------------------------------
 
 /etc/ssh/sshd_config
 #	$OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
@@ -216,6 +218,6 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 #	PermitTTY no
 #	ForceCommand cvs server
 
----
+---------------------------------------------
 
 
