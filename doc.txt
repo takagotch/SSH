@@ -17,6 +17,11 @@ ssh-keygen -t rsa
 ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > public_key
 ssh-keygen -yf /c/users/tky/.vagrant.d/insecure_private_key > ~/.ssh/authorized_keys/public_key
 
+/*
+ config.ssh.private_key_path = "C:\\Users\\tky\\.ssh\\id_rsa"
+ config.ssh.forward_agent = true 
+*/
+
 /**
 mkdir vm
 cd vm
