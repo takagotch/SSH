@@ -13,6 +13,7 @@ cmd
 ssh-keygen -t rsa
 
 ---
+tky cd ../../..
 
 GLOBAL
 /etc/ssh/
