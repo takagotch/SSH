@@ -9,15 +9,17 @@ id_rsa:     private key, insecure_private_key ; Host server A ; chmod 600 id_rsa
 ./ssh
 
 
-cmd
+- cmd
 ssh-keygen -t rsa
+ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > public_key
+vagrant ssh-config --host hostname >> ~/.ssh/config
 
 ---
 windows
 tky ~
 cd ../../..
 
-root GLOBAL
+- root GLOBAL
 /etc/ssh/
 ssh_config
 sshd_config
