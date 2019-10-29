@@ -1,7 +1,7 @@
 - PC name
 Host server A -> client server B
 /** vagrant
-/c/Users/tky/.vagrant.d/insecure_private_key -> ~/.ssh | ~/.ssh/vagrant/public_key
+/c/Users/tky/.vagrant.d/insecure_private_key -> ~/.ssh | ~/.ssh/public_key (strage ~/.ssh/github_strage/public_key)
 **/
 
 - key name
@@ -19,7 +19,7 @@ ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > public_key
 mkdir vm
 cd vm
 ~/vm
-ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > ./.ssh/vagrant/public_key
+ssh-keygen -yf /c/Users/tky/.vagrant.d/insecure_private_key > ./.ssh/public_key (strage ~/.ssh/github_strage/public_key)
 **/
 vagrant ssh-config --host hostname >> ~/.ssh/config
 
